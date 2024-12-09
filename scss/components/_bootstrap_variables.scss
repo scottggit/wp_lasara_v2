@@ -1,0 +1,63 @@
+//$enable-gradients: true;
+$enable-shadows: true;
+
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+//$input-placeholder-color: #b6ae8c;
+
+$headings-color: #191f24;
+$headings-font-weight: 400;
+
+$display-font-sizes: (
+    1: 8.75rem,
+    //140px
+    2: 5.875rem,
+    //94px
+    3: 4.875rem,
+    //78px
+    4: 4rem,
+    //64px
+    5: 3.5rem,
+    6: 3rem,
+);
+
+/* $container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1200px,
+    xxl: 1400px,
+); */
+
+$font-size-base: 1rem;
+
+$white: #fff;
+$black: #000000;
+
+$primary: #8f8061;
+
+$h1-font-size: $font-size-base * 2.5; //40
+$h2-font-size: $font-size-base * 2; //32
+$h3-font-size: $font-size-base * 1.625; //26
+$h4-font-size: $font-size-base * 1.375; //22
+$h5-font-size: $font-size-base * 1.125; //18
+$h6-font-size: $font-size-base; //16
+$small-font-size: $font-size-base * 0.875; //14
+$smaller-font-size: $font-size-base * 0.75; //12
+$smallest-font-size: $font-size-base * 0.625; //10
+
+$link-decoration: none;
+$dark: #191f24;
+$light: #f2f2f2;
+
+$navbar-brand-font-size: $font-size-base * 1.375; //22
+$navbar-light-color: rgba($primary, 1);
+$navbar-light-hover-color: rgba($primary, 1);
+$navbar-light-active-color: rgba($primary, 1);
+$navbar-light-brand-color: $black;
+
+$navbar-nav-link-padding-x: 2rem;
+$navbar-padding-y: 0.75rem;
+
+$card-border-color: $white;
+$card-border-radius: 0;

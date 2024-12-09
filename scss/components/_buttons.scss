@@ -1,0 +1,226 @@
+.btn {
+    --bs-border-radius: 0;
+    --bs-border-radius-sm: 0;
+    --bs-border-radius-lg: 0;
+    --bs-btn-font-weight: 600;
+    --bs-btn-padding-x: 1.875rem;
+    --bs-btn-padding-y: 1.125rem;
+    --bs-btn-line-height: 1;
+
+    text-transform: uppercase;
+}
+
+.btn-primary,
+.btn-light,
+.btn-dark {
+    --bs-btn-color: var(--clr-white);
+    --btn-bg: var(--clr-brand-hover);
+    --btn-bg-hover: var(--clr-brand-hover);
+
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    overflow: hidden;
+
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+
+    box-shadow: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: var(--btn-bg-hover);
+
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+
+        -webkit-transition: transform 0.3s ease-in;
+        transition: transform 0.3s ease-in;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--clr-white);
+        &:before {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+    }
+}
+
+.btn-primary {
+    --btn-bg: var(--clr-brand-hover);
+    --btn-bg-hover: var(--clr-brand-hover);
+
+    --bs-btn-hover-bg: var(--clr-brand);
+    --bs-btn-hover-border-color: var(--btn-bg-hover);
+    --bs-btn-hover-color: var(--clr-white);
+
+    --bs-btn-active-bg: var(--clr-brand);
+    --bs-btn-active-border-color: var(--btn-bg-hover);
+    --bs-btn-active-color: var(--clr-white);
+}
+.btn-dark {
+    --btn-bg: var(--clr-dark);
+    --btn-bg-hover: var(--clr-brand);
+
+    --bs-btn-bg: var(--btn-bg);
+    --bs-btn-border-color: var(--btn-bg);
+
+    --bs-btn-hover-color: var(--clr-white);
+    --bs-btn-hover-bg: var(--btn-bg);
+    --bs-btn-hover-border-color: var(--btn-bg-hover);
+
+    --bs-btn-active-color: var(--clr-white);
+    --bs-btn-active-bg: var(--btn-bg);
+    --bs-btn-active-border-color: var(--btn-bg-hover);
+}
+.btn-light {
+    --bs-btn-color: var(--clr-dark);
+    --btn-bg: var(--clr-light);
+    --btn-bg-hover: var(--clr-brand);
+
+    --bs-btn-bg: var(--btn-bg);
+    --bs-btn-border-color: var(--btn-bg);
+
+    --bs-btn-hover-color: var(--clr-white);
+    --bs-btn-hover-bg: var(--btn-bg);
+    --bs-btn-hover-border-color: var(--clr-white);
+
+    --bs-btn-active-color: var(--clr-white);
+    --bs-btn-active-bg: var(--btn-bg);
+    --bs-btn-active-border-color: var(--clr-white);
+}
+
+.btn-outline-primary {
+    background: none;
+    box-shadow: inset 0 0 0 0 var(--clr-brand);
+    transition:
+        box-shadow 0.5s ease,
+        color 0.5s ease;
+    &:hover,
+    &:focus {
+        --bs-btn-hover-bg: transparent;
+        border-color: var(--clr-brand);
+        color: var(--clr-white);
+        box-shadow: inset 16em 0 0 0 var(--clr-brand);
+    }
+}
+.btn-outline-dark {
+    --bs-btn-color: var(--clr-dark);
+    --bs-btn-border-color: var(--clr-dark);
+    --bs-btn-hover-color: var(--clr-white);
+    --bs-btn-hover-bg: var(--clr-dark);
+    --bs-btn-hover-border-color: var(--clr-dark);
+    --bs-btn-focus-shadow-rgb: 108, 117, 125;
+    --bs-btn-active-color: var(--clr-white);
+    --bs-btn-active-bg: var(--clr-dark);
+    --bs-btn-active-border-color: var(--clr-dark);
+
+    background: none;
+    box-shadow: inset 0 0 0 0 var(--clr-dark);
+    transition:
+        box-shadow 0.5s ease,
+        color 0.5s ease;
+    &:hover,
+    &:focus {
+        --bs-btn-hover-bg: transparent;
+        border-color: var(--clr-dark);
+        color: var(--clr-white);
+        box-shadow: inset 16em 0 0 0 var(--clr-dark);
+    }
+}
+.btn-outline-light {
+    --bs-btn-color: var(--clr-light);
+    --bs-btn-border-color: var(--clr-light);
+    --bs-btn-hover-color: var(--clr-white);
+    --bs-btn-hover-bg: var(--clr-light);
+    --bs-btn-hover-border-color: var(--clr-light);
+    --bs-btn-focus-shadow-rgb: 108, 117, 125;
+    --bs-btn-active-color: var(--clr-white);
+    --bs-btn-active-bg: var(--clr-light);
+    --bs-btn-active-border-color: var(--clr-light);
+
+    background: none;
+    box-shadow: inset 0 0 0 0 var(--clr-light);
+    transition:
+        box-shadow 0.5s ease,
+        color 0.5s ease;
+    &:hover,
+    &:focus {
+        --bs-btn-hover-bg: transparent;
+        border-color: var(--clr-light);
+        color: var(--clr-dark);
+        box-shadow: inset 16em 0 0 0 var(--clr-light);
+    }
+}
+
+.btn-icon {
+    --icon-size: 1rem;
+    --btn-icon: var(--arrow-right-dark);
+    position: relative;
+    @extend %flex-a-center-j-between;
+    gap: 0.5rem;
+
+    &::after {
+        content: '';
+        background-image: var(--btn-icon);
+        background-repeat: no-repeat;
+        background-size: var(--icon-size);
+        background-position: center;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        display: block;
+
+        -webkit-transition: background-image 0.6s ease-out;
+        transition: background-image 0.6s ease-out;
+    }
+
+    &.icon-calendar {
+        --btn-icon: var(--calendar-light);
+    }
+
+    &.icon-arrow-light {
+        --btn-icon: var(--arrow-right-light);
+        &:hover {
+            --btn-icon: var(--arrow-right-dark);
+        }
+    }
+    &.icon-video-light {
+        --btn-icon: var(--video-right-light);
+    }
+    &.icon-arrow-primary {
+        --btn-icon: var(--arrow-right-primary);
+        &:hover {
+            --btn-icon: var(--arrow-right-light);
+        }
+    }
+
+    &.icon-arrow-dark {
+        --btn-icon: var(--arrow-right-dark);
+        &:hover {
+            --btn-icon: var(--arrow-right-light);
+        }
+    }
+
+    &.icon-gallery {
+        --icon-size: 1.125rem;
+        --btn-icon: var(--gallery-primary);
+        &:hover {
+            --btn-icon: var(--gallery-light);
+        }
+    }
+    &.icon-phone {
+        --icon-size: 1.125rem;
+        --btn-icon: var(--phone-primary);
+        &:hover {
+            --btn-icon: var(--phone-light);
+        }
+    }
+}

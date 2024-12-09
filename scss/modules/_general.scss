@@ -1,0 +1,67 @@
+.sitemap-item {
+    --bs-card-border-color: var(--clr-brand);
+    position: relative;
+    isolation: isolate;
+    border: 1px solid var(--clr-brand);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+    &::after {
+        content: '';
+        inset: 0.5rem;
+        background-color: var(--clr-white);
+        display: block;
+        position: absolute;
+        z-index: -1;
+        transition: all 0.3s ease;
+    }
+    &:hover,
+    &:focus {
+        --bs-white-rgb: var(--clr-brand-rgb);
+        color: var(--clr-white);
+        &::after {
+            inset: 0;
+            background-color: var(--clr-brand);
+        }
+    }
+}
+
+.overlap-content-wrapper {
+    position: relative;
+    isolation: isolate;
+}
+.overlap-content-img {
+}
+.overlap-content {
+    position: relative;
+    background-color: var(--clr-white);
+    z-index: 2;
+}
+.img-cover {
+    object-fit: cover;
+    .side-img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 400px;
+    }
+}
+.h-def {
+    height: var(--h-def, 300px);
+}
+@media screen and (min-width: 992px) {
+    .img-cover .side-img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        max-height: none;
+    }
+    .overlap-content-img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 75%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
